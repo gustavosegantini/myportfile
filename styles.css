@@ -1,0 +1,257 @@
+/* Estilos dark */
+body {
+    background-color: #222;
+    color: #f4f4f4;
+    font-family: sans-serif;
+}
+
+/* Estilos dos cards */
+.card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+    line-height: 1.8;
+}
+
+/* Estilos específicos do card de experiência profissional */
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.job {
+    background-color: #444;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.job h3,
+.job h4 {
+    margin-bottom: 0.5rem;
+}
+
+.job ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+
+/* Estilos das imagens do card */
+.card-image-wrapper {
+    flex-shrink: 0; /* Impede que o elemento diminua proporcionalmente */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 2rem;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background-image: linear-gradient(450deg, #ff6a00, #ee0979); /* Adicione esta linha para aplicar o gradiente */
+    -webkit-background-clip: text; /* Adicione esta linha para cortar o fundo para a forma do texto (para navegadores WebKit) */
+    background-clip: text; /* Adicione esta linha para cortar o fundo para a forma do texto */
+    color: transparent; /* Adicione esta linha para tornar a cor do texto transparente */
+}
+
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.card li {
+    position: relative;
+    border: 2px solid #fff;
+    border-radius: 28px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    
+    background-size: 200% 100%;
+    background-position: 100% 0;
+}
+
+.card li:hover {
+    border: 2px solid transparent;
+    position: relative;
+
+    border-radius: 28px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+   
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-image: linear-gradient(45deg, #ff6a00, #ee0979);
+}
+
+
+
+
+/* .card li {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #ff6a00, #ee0979);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.4s ease;
+}
+
+.card li:hover {
+    background-position: 0 0;
+    color: #fff;
+} */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal h1, h3 {
+    background-image: linear-gradient(450deg, #ff6a00, #ee0979); /* Adicione esta linha para aplicar o gradiente */
+    -webkit-background-clip: text; /* Adicione esta linha para cortar o fundo para a forma do texto (para navegadores WebKit) */
+    background-clip: text; /* Adicione esta linha para cortar o fundo para a forma do texto */
+    color: transparent; /* Adicione esta linha para tornar a cor do texto transparente */
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 15% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff6a00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    
+  
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+/* Consulta de mídia para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Aumenta a largura do modal para ocupar a maior parte da tela */
+        margin: 10% auto; /* Diminui a margem superior e inferior */
+    }
+
+    /* Diminui o tamanho das fontes para caber melhor na tela */
+    .modal h1 {
+        font-size: 1.5rem;
+    }
+
+    .modal h3 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 1rem; /* Diminui o padding dos cards */
+    }
+
+    .card-image-wrapper {
+        width: 150px; /* Diminui a largura das imagens dos cards */
+        height: 150px; /* Diminui a altura das imagens dos cards */
+        margin-right: 1rem; /* Diminui a margem à direita das imagens dos cards */
+    }
+
+    .card h1 {
+        font-size: 1.5rem; /* Diminui o tamanho da fonte dos títulos dos cards */
+    }
+
+    .card h2 {
+        font-size: 1.2rem; /* Diminui o tamanho da fonte dos subtítulos dos cards */
+    }
+
+    .card p {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte dos parágrafos dos cards */
+    }
+
+    .experience {
+        gap: 0.5rem; /* Diminui o espaço entre os itens de experiência profissional */
+    }
+
+    .job {
+        padding: 0.5rem; /* Diminui o padding dos itens de experiência profissional */
+    }
+
+    .job h3,
+    .job h4 {
+        margin-bottom: 0.25rem; /* Diminui a margem inferior dos títulos e subtítulos dos itens de experiência profissional */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+         
+
+ 
